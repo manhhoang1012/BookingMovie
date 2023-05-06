@@ -1,0 +1,61 @@
+﻿@model IEnumerable<BookingTicket.Models.Ve>
+
+@{
+    ViewBag.Title = "Index1";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="hero mv-single-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- <h1> movie listing - list</h1>
+                <ul class="breadcumb">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li> <span class="ion-ios-arrow-right"></span> movie listing</li>
+                </ul> -->
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ghe.Row)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LichChieu.Id)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.DaBan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaBan)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ghe.Row)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LichChieu.Id)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.DaBan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaBan)
+        </td>
+        <td>
+           
+            <a href="~/Content/js/seat/Index.html">Datve</a>
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<BookingTicket.Models.LichChieu>
+
+@{
+    ViewBag.Title = "Index1";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<div class="hero mv-single-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- <h1> movie listing - list</h1>
+                <ul class="breadcumb">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li> <span class="ion-ios-arrow-right"></span> movie listing</li>
+                </ul> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DinhDangPhim.DinhDang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phim.TenPhim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhongChieu.TenPhong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayChieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GioBatDau)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GioKetThuc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DinhDangPhim.DinhDang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phim.TenPhim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhongChieu.TenPhong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayChieu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GioBatDau)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GioKetThuc)
+        </td>
+        <td>
+            <a href="@Url.Action("Index1", "Ves",  new { id=item.Id })">Xem lich chieu</a>
+            
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,67 @@
+﻿@model BookingTicket.Models.LichChieu
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LichChieu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DinhDangPhim.DinhDang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DinhDangPhim.DinhDang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phim.TenPhim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phim.TenPhim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhongChieu.TenPhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhongChieu.TenPhong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayChieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayChieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GioBatDau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GioBatDau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GioKetThuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GioKetThuc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
